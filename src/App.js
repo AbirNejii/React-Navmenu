@@ -1,25 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navmenu from './Components/Navmenu';
+
+let nav = [
+  { item1: "Home" },
+  { item1: "Contact" },
+  {
+    item1: "Service",
+    subitem: [
+      "For Entrepreneurs",
+      "For Student",
+      "For Hobbyists"
+     
+    ]
+  }
+];
+
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Navmenu navmenu={nav} />
     </div>
+
   );
 }
 
